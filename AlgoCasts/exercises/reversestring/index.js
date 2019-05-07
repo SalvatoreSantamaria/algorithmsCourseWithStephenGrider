@@ -15,6 +15,17 @@
 
 function reverse(str) {
   let reversed = '';
-  for ()
+  for (let i of str) {
+    reversed = i + reversed;
+  }
+  return reversed;
 }
 module.exports = reverse;
+
+// total overkill
+// function reverse(str) { 
+//   return str.split('').reduce((reversed, character) => {
+//     return character + reversed;
+//    }, '');  //reduce condenses all array values into 1
+// }
+// module.exports = reverse;
