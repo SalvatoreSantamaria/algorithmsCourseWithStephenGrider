@@ -8,6 +8,21 @@
 // Example:
 //   fib(4) === 3
 
-function fib(n) {}
+//iterative approach
+function fib(n) {
+  const result = [0, 1]; //make sure to add these here
+  for (let i = 2; i <= n; i++) {
+    const a = result[i - 1];
+    const b = result[i - 2];
+    result.push(a + b);
+  }
+  // return result;
+  console.log(result); // return the array
+  console.log(result[n]) //return the number that the position n
 
-module.exports = fib;
+}
+
+//module.exports = fib;
+
+
+fib(10);
