@@ -8,17 +8,64 @@
 // chunk([1, 2, 3, 4, 5], 4) --> [[ 1, 2, 3, 4], [5]]
 // chunk([1, 2, 3, 4, 5], 10) --> [[ 1, 2, 3, 4, 5]]
 
-function chunk(array, size) {
-  const chunked = [];
-  for (let element of array) {
-    const last = chunked[chunked.length - 1]; //get the last element in the chunked array
-    if (!last || last.length === size) { //if element does not exist, or if last === size
-      chunked.push([element]); //add the subarray 'last' to chunked
-    } else {
-      last.push(element); //push a value into 
-    }
+
+
+function chunk(array, size) { 
+  let result = []
+  let i = 0
+  while (i < array.length) {
+    result.push(array.slice(i, i + size)) //slice does the magic of index through whatever number size is
+    i += size  // increment by size
   }
-  return chunked;
+  console.log(result)
+  return result;
 }
+
+
+chunk([1, 2, 3, 4], 2)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// function chunk(array, size) {
+//   const chunked = [];
+//   for (let element of array) {
+//     const last = chunked[chunked.length - 1]; //get the last element in the chunked array
+//     if (!last || last.length === size) { //if element does not exist, or if last === size
+//       chunked.push([element]); //add the subarray 'last' to chunked
+//     } else {
+//       last.push(element); //push a value into 
+//     }
+//   }
+//   return chunked;
+// }
 
 module.exports = chunk;
