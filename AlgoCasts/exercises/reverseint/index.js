@@ -15,7 +15,19 @@
 
 
 
-
+function reverseInt(n) {
+  let str = n.toString()
+  let result = ''
+  for (i of str) {
+    result = result + i
+  }
+  if (n > 0) {
+  return parseInt(result)
+  } else if (n < 0) {
+    return parseInt(result) * -1;
+  }
+}
+// reverseInt(15)
  module.exports = reverseInt;
 
 

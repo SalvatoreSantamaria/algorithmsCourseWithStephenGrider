@@ -14,7 +14,7 @@ function chunk(array, size) {
   let result = []
   let i = 0
   while (i < array.length) {
-    result.push(array.slice(i, i + size)) //slice does the magic of index through whatever number size is
+    result.push(array.slice(i, i + size)) //slice does the magic of index through whatever number s
     i += size  // increment by size
   }
   console.log(result)
