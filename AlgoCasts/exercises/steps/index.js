@@ -17,6 +17,8 @@
 //       '### '
 //       '####'
 
+// we are making multiple console log statement calls. 
+
 function steps(n) {
   for (let row = 0; row < n; row++) {   //iterate thru rows
     let stair = '';

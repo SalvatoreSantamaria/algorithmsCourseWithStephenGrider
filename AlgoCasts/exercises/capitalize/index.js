@@ -8,12 +8,9 @@
 //   capitalize('look, it is working!') --> 'Look, It Is Working!'
 
 function capitalize(str) {
-  
   let result = [];
   for (let i of str.split(' ')) {
-    
     result.push(i[0].toUpperCase() + i.slice(1));
-  
   }
   return result.join(' ');
 }
