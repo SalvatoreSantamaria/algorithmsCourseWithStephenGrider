@@ -8,6 +8,21 @@
 //     q.add(1);
 //     q.remove(); // returns 1;
 
-class Queue {}
+class Queue {
+// create an array inside the class
+  // initialize an array
+  constructor() {
+    this.queue_array = [];
+  }
 
+  add(record) {
+    this.queue_array.unshift(record)
+  } 
+
+  remove(record) {
+    //returning as well so we can work with this record
+    return(this.queue_array.pop(record))
+  }
+
+}
 module.exports = Queue;
