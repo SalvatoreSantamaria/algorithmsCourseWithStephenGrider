@@ -26,7 +26,6 @@ class Stack {
   peek(){
     return(this.stack_array[this.stack_array.length - 1])
   }
-
 }
 
 module.exports = Stack;
