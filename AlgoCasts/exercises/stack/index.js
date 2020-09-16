@@ -10,6 +10,23 @@
 //   s.pop(); // returns 2
 //   s.pop(); // returns 1
 
-class Stack {}
+class Stack {
+  constructor() {
+    this.stack_array = []; //stack_array can be called anything
+  }
+
+  push(record){
+    this.stack_array.push(record)
+  }
+
+  pop(record){
+    return(this.stack_array.pop(record))
+  }
+
+  peek(){
+    return(this.stack_array[this.stack_array.length - 1])
+  }
+
+}
 
 module.exports = Stack;
