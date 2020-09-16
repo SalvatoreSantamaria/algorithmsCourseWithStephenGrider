@@ -24,6 +24,20 @@
 
 const Queue = require('./queue');
 
-function weave(sourceOne, sourceTwo) {}
+function weave(sourceOne, sourceTwo) {
+  const q = new Queue();
+
+  // using peek function to not accexss the array inside of the queue
+
+  while (sourceOne.peek() || sourceTwo.peek() ) { //while either one is returning a method
+    if (sourceOne.peek()) {
+      q.add(sourceOne.remove())
+    }
+    if (sourceTwo.peek()) {
+      q.add(sourceTwo.remove())
+    }
+  }
+  return q;
+}
 
 module.exports = weave;

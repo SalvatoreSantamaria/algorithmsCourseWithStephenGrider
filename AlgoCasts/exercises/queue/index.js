@@ -9,8 +9,7 @@
 //     q.remove(); // returns 1;
 
 class Queue {
-// create an array inside the class
-  // initialize an array
+  // create an array inside the class and initialize an array
   constructor() {
     this.queue_array = [];
   }
@@ -23,6 +22,5 @@ class Queue {
     //returning as well so we can work with this record
     return(this.queue_array.pop(record))
   }
-
 }
 module.exports = Queue;
