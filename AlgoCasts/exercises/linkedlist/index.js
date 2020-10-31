@@ -13,6 +13,11 @@ class LinkedList {
   constructor() {
     this.head = null;
   }
+  insertFirst(data) {
+    const node = new Node(data, this.head); //make a new node, and with this.head  passing into 'next' this sets this to be the first node
+    this.head = node; //update the reference to set this current node to head
+
+  }
 }
 
 // in practice:
